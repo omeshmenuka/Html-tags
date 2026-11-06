@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML Tags Reference</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: yellow;
+      color: #222;
+      line-height: 1.5;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+
+    .search-box {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .search-box input {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px 14px;
+      font-size: 1rem;
+      border: 2px solid #333;
+      border-radius: 6px;
+    }
+
+    .tag-card {
+      background: #fff9c4;
+      border: 2px solid #333;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+
+    .tag-card.hidden {
+      display: none;
+    }
+
+    .tag-name {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 6px;
+    }
+
+    .explanation {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .example {
+      background: #fff;
+      border: 1px solid #999;
+      border-radius: 4px;
+      padding: 8px 10px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+
+    .example-label {
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+      color: #444;
+    }
+
+    #no-results {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.1rem;
+    }
+
+    h2 {
+      margin: 28px 0 12px;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #333;
+      padding-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple HTML Tags</h1>
+  <p class="intro">Tag • Simple explanation • Example</p>
+
+  <div class="search-box">
+    <input type="search" id="search" placeholder="Search tags…" autocomplete="off">
+  </div>
+
+  <div id="no-results">No matching tags found.</div>
+
+  <!-- Main root -->
+  <h2>Main root</h2>
+  <div class="tag-card" data-tag="html">
+    <div class="tag-name">&lt;html&gt;</div>
+    <div class="explanation">The root element of every HTML page. Everything else goes inside it.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;html&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;</div>
+  </div>
+
+  <!-- Document metadata -->
+  <h2>Document metadata</h2>
+  <div class="tag-card" data-tag="head">
+    <div class="tag-name">&lt;head&gt;</div>
+    <div class="explanation">Holds information about the page (title, CSS, scripts). Not shown on the page.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;head&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="title">
+    <div class="tag-name">&lt;title&gt;</div>
+    <div class="explanation">Sets the text that appears in the browser tab.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;title&gt;My Website&lt;/title&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="meta">
+    <div class="tag-name">&lt;meta&gt;</div>
+    <div class="explanation">Gives extra information about the page (charset, description, viewport, etc.).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;meta charset="UTF-8"&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="link">
+    <div class="tag-name">&lt;link&gt;</div>
+    <div class="explanation">Links external resources like CSS files or icons.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;link rel="stylesheet" href="style.css"&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="style">
+    <div class="tag-name">&lt;style&gt;</div>
+    <div class="explanation">Writes CSS styles directly inside the HTML page.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;style&gt;
+  body { color: blue; }
+&lt;/style&gt;</div>
+  </div>
+
+  <!-- Page structure -->
+  <h2>Page structure</h2>
+  <div class="tag-card" data-tag="body">
+    <div class="tag-name">&lt;body&gt;</div>
+    <div class="explanation">Contains all the visible content of the page.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;body&gt;
+  &lt;h1&gt;Hello&lt;/h1&gt;
+&lt;/body&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="header">
+    <div class="tag-name">&lt;header&gt;</div>
+    <div class="explanation">Introductory content at the top (logo, title, navigation).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;header&gt;
+  &lt;h1&gt;My Site&lt;/h1&gt;
+&lt;/header&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="nav">
+    <div class="tag-name">&lt;nav&gt;</div>
+    <div class="explanation">Holds navigation links (menu).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;nav&gt;
+  &lt;a href="/"&gt;Home&lt;/a&gt;
+  &lt;a href="/about"&gt;About&lt;/a&gt;
+&lt;/nav&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="main">
+    <div class="tag-name">&lt;main&gt;</div>
+    <div class="explanation">The main content of the page.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;main&gt;
+  &lt;p&gt;This is the main content.&lt;/p&gt;
+&lt;/main&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="section">
+    <div class="tag-name">&lt;section&gt;</div>
+    <div class="explanation">A section of content, usually with a heading.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;section&gt;
+  &lt;h2&gt;About us&lt;/h2&gt;
+  &lt;p&gt;We make websites.&lt;/p&gt;
+&lt;/section&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="article">
+    <div class="tag-name">&lt;article&gt;</div>
+    <div class="explanation">A self-contained piece of content (blog post, news item).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;article&gt;
+  &lt;h2&gt;My Blog Post&lt;/h2&gt;
+  &lt;p&gt;Content here...&lt;/p&gt;
+&lt;/article&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="aside">
+    <div class="tag-name">&lt;aside&gt;</div>
+    <div class="explanation">Side content related to the main content (sidebar).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;aside&gt;
+  &lt;p&gt;Related links&lt;/p&gt;
+&lt;/aside&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="footer">
+    <div class="tag-name">&lt;footer&gt;</div>
+    <div class="explanation">Footer content (copyright, links, contact).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;footer&gt;
+  &lt;p&gt;© 2026 My Site&lt;/p&gt;
+&lt;/footer&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="h1 h2 h3 h4 h5 h6 heading">
+    <div class="tag-name">&lt;h1&gt; – &lt;h6&gt;</div>
+    <div class="explanation">Headings. &lt;h1&gt; is the most important, &lt;h6&gt; the least.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Subtitle&lt;/h2&gt;</div>
+  </div>
+
+  <!-- Text content -->
+  <h2>Text content</h2>
+  <div class="tag-card" data-tag="p">
+    <div class="tag-name">&lt;p&gt;</div>
+    <div class="explanation">A paragraph of text.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;p&gt;This is a paragraph.&lt;/p&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="div">
+    <div class="tag-name">&lt;div&gt;</div>
+    <div class="explanation">A generic box for grouping content. No special meaning.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;div class="box"&gt;
+  Some content
+&lt;/div&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="span">
+    <div class="tag-name">&lt;span&gt;</div>
+    <div class="explanation">A generic inline container for small pieces of text.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;p&gt;Hello &lt;span&gt;world&lt;/span&gt;&lt;/p&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="br">
+    <div class="tag-name">&lt;br&gt;</div>
+    <div class="explanation">Creates a line break.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">Line 1&lt;br&gt;
+Line 2</div>
+  </div>
+
+  <div class="tag-card" data-tag="hr">
+    <div class="tag-name">&lt;hr&gt;</div>
+    <div class="explanation">A horizontal line (thematic break).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;p&gt;Section 1&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Section 2&lt;/p&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="ul">
+    <div class="tag-name">&lt;ul&gt;</div>
+    <div class="explanation">Unordered (bulleted) list.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="ol">
+    <div class="tag-name">&lt;ol&gt;</div>
+    <div class="explanation">Ordered (numbered) list.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="li">
+    <div class="tag-name">&lt;li&gt;</div>
+    <div class="explanation">A list item inside &lt;ul&gt; or &lt;ol&gt;.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;li&gt;List item&lt;/li&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="blockquote">
+    <div class="tag-name">&lt;blockquote&gt;</div>
+    <div class="explanation">A longer quotation.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;blockquote&gt;
+  To be or not to be.
+&lt;/blockquote&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="pre">
+    <div class="tag-name">&lt;pre&gt;</div>
+    <div class="explanation">Preformatted text (keeps spaces and line breaks).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;pre&gt;
+  code here
+&lt;/pre&gt;</div>
+  </div>
+
+  <!-- Inline text -->
+  <h2>Inline text</h2>
+  <div class="tag-card" data-tag="a">
+    <div class="tag-name">&lt;a&gt;</div>
+    <div class="explanation">Creates a hyperlink.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;a href="https://example.com"&gt;Visit site&lt;/a&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="strong">
+    <div class="tag-name">&lt;strong&gt;</div>
+    <div class="explanation">Important text (usually bold).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;strong&gt;Warning!&lt;/strong&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="em">
+    <div class="tag-name">&lt;em&gt;</div>
+    <div class="explanation">Emphasized text (usually italic).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;em&gt;This is important&lt;/em&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="code">
+    <div class="tag-name">&lt;code&gt;</div>
+    <div class="explanation">Shows a short piece of computer code.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;code&gt;console.log("Hi")&lt;/code&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="mark">
+    <div class="tag-name">&lt;mark&gt;</div>
+    <div class="explanation">Highlighted / marked text.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;mark&gt;highlighted&lt;/mark&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="small">
+    <div class="tag-name">&lt;small&gt;</div>
+    <div class="explanation">Smaller text (side notes, legal text).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;small&gt;© 2026&lt;/small&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="sub">
+    <div class="tag-name">&lt;sub&gt;</div>
+    <div class="explanation">Subscript text (below the line).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">H&lt;sub&gt;2&lt;/sub&gt;O</div>
+  </div>
+
+  <div class="tag-card" data-tag="sup">
+    <div class="tag-name">&lt;sup&gt;</div>
+    <div class="explanation">Superscript text (above the line).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">x&lt;sup&gt;2&lt;/sup&gt;</div>
+  </div>
+
+  <!-- Images & media -->
+  <h2>Images & media</h2>
+  <div class="tag-card" data-tag="img">
+    <div class="tag-name">&lt;img&gt;</div>
+    <div class="explanation">Displays an image.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;img src="photo.jpg" alt="A photo"&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="audio">
+    <div class="tag-name">&lt;audio&gt;</div>
+    <div class="explanation">Embeds an audio player.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;audio controls src="song.mp3"&gt;&lt;/audio&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="video">
+    <div class="tag-name">&lt;video&gt;</div>
+    <div class="explanation">Embeds a video player.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;video controls src="movie.mp4"&gt;&lt;/video&gt;</div>
+  </div>
+
+  <!-- Embedded content -->
+  <h2>Embedded content</h2>
+  <div class="tag-card" data-tag="iframe">
+    <div class="tag-name">&lt;iframe&gt;</div>
+    <div class="explanation">Embeds another webpage inside the current page.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;iframe src="https://example.com"&gt;&lt;/iframe&gt;</div>
+  </div>
+
+  <!-- Tables -->
+  <h2>Tables</h2>
+  <div class="tag-card" data-tag="table">
+    <div class="tag-name">&lt;table&gt;</div>
+    <div class="explanation">Creates a table.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Anna&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="tr">
+    <div class="tag-name">&lt;tr&gt;</div>
+    <div class="explanation">A table row.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;tr&gt;...&lt;/tr&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="th">
+    <div class="tag-name">&lt;th&gt;</div>
+    <div class="explanation">A table header cell.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;th&gt;Name&lt;/th&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="td">
+    <div class="tag-name">&lt;td&gt;</div>
+    <div class="explanation">A regular table data cell.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;td&gt;Anna&lt;/td&gt;</div>
+  </div>
+
+  <!-- Forms -->
+  <h2>Forms</h2>
+  <div class="tag-card" data-tag="form">
+    <div class="tag-name">&lt;form&gt;</div>
+    <div class="explanation">A form for user input.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;form action="/submit"&gt;
+  ...
+&lt;/form&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="input">
+    <div class="tag-name">&lt;input&gt;</div>
+    <div class="explanation">An input field (text, password, checkbox, etc.).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;input type="text" placeholder="Name"&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="label">
+    <div class="tag-name">&lt;label&gt;</div>
+    <div class="explanation">A label for a form control.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input id="email" type="email"&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="button">
+    <div class="tag-name">&lt;button&gt;</div>
+    <div class="explanation">A clickable button.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;button type="submit"&gt;Send&lt;/button&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="textarea">
+    <div class="tag-name">&lt;textarea&gt;</div>
+    <div class="explanation">A multi-line text input box.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;textarea rows="4" cols="40"&gt;&lt;/textarea&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="select">
+    <div class="tag-name">&lt;select&gt;</div>
+    <div class="explanation">A dropdown list of options.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;select&gt;
+  &lt;option&gt;Red&lt;/option&gt;
+  &lt;option&gt;Blue&lt;/option&gt;
+&lt;/select&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="option">
+    <div class="tag-name">&lt;option&gt;</div>
+    <div class="explanation">One choice inside a &lt;select&gt;.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;option value="red"&gt;Red&lt;/option&gt;</div>
+  </div>
+
+  <!-- Interactive -->
+  <h2>Interactive</h2>
+  <div class="tag-card" data-tag="details">
+    <div class="tag-name">&lt;details&gt;</div>
+    <div class="explanation">A collapsible section (click to open/close).</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;details&gt;
+  &lt;summary&gt;More info&lt;/summary&gt;
+  &lt;p&gt;Hidden text here.&lt;/p&gt;
+&lt;/details&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="summary">
+    <div class="tag-name">&lt;summary&gt;</div>
+    <div class="explanation">The clickable title of a &lt;details&gt; element.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;summary&gt;Click me&lt;/summary&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="dialog">
+    <div class="tag-name">&lt;dialog&gt;</div>
+    <div class="explanation">A dialog box / modal.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;dialog open&gt;
+  &lt;p&gt;Hello!&lt;/p&gt;
+&lt;/dialog&gt;</div>
+  </div>
+
+  <!-- Scripting -->
+  <h2>Scripting</h2>
+  <div class="tag-card" data-tag="script">
+    <div class="tag-name">&lt;script&gt;</div>
+    <div class="explanation">Adds JavaScript code to the page.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;script&gt;
+  alert("Hello");
+&lt;/script&gt;</div>
+  </div>
+
+  <div class="tag-card" data-tag="canvas">
+    <div class="tag-name">&lt;canvas&gt;</div>
+    <div class="explanation">A drawing area for graphics with JavaScript.</div>
+    <div class="example-label">Example:</div>
+    <div class="example">&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const cards = document.querySelectorAll('.tag-card');
+    const headings = document.querySelectorAll('h2');
+    const noResults = document.getElementById('no-results');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const tag = card.dataset.tag || '';
+        const text = card.textContent.toLowerCase();
+        const match = !query || tag.includes(query) || text.includes(query);
+        card.classList.toggle('hidden', !match);
+        if (match) visibleCount++;
+      });
+
+      headings.forEach(h => {
+        let next = h.nextElementSibling;
+        let hasVisible = false;
+        while (next && next.tagName !== 'H2') {
+          if (next.classList.contains('tag-card') && !next.classList.contains('hidden')) {
+            hasVisible = true;
+            break;
+          }
+          next = next.nextElementSibling;
+        }
+        h.style.display = hasVisible ? '' : 'none';
+      });
+
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>
